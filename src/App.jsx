@@ -1,19 +1,19 @@
 import Jobcard from "./components/Jobcard.jsx";
 import Filterbar from "./components/Filterbar.jsx";
-// import data from "../public/data.json";
+import data from "../public/data.json";
 import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [data, setData] = useState(undefined);
+  // const [data, setData] = useState(undefined);
   const [filters, setFilters] = useState([]);
 
-  useEffect(() => {
-    fetch("./data.json")
-      .then((data) => data.json())
-      .then((json) => setData(json))
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("./data.json")
+  //     .then((data) => data.json())
+  //     .then((json) => setData(json))
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   const addFilter = (newFilter) => {
     if (filters.includes(newFilter)) return;
