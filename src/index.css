@@ -98,7 +98,7 @@ body {
   min-height: 12vh;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   #header {
     background-image: url("./assets/images/bg-header-desktop.svg");
   }
