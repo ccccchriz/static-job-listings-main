@@ -1,5 +1,46 @@
 .filterbar {
   margin: -1rem 1rem 0 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: hsl(var(--clr-neutral-100));
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+}
+
+.filterbar__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9375rem;
+}
+
+.filterbar__list > li {
+  background-color: hsla(var(--clr-primary-cyan), 0.15);
+  color: hsl(var(--clr-primary-cyan));
+  font-weight: var(--fw-bold);
+  display: flex;
+  justify-content: center;
+}
+
+.filterbar__list > li > span {
+  padding: 0.2rem 0.5rem;
+}
+
+.filterbar__list > li > button {
+  padding: 0 0.5rem;
+  border: none;
+  background-color: hsl(var(--clr-primary-cyan));
+  cursor: pointer;
+}
+
+.filterbar__clear {
+  background-color: transparent;
+  border: none;
+  font-weight: var(--fw-bold);
+  color: hsl(var(--clr-neutral-400));
+  padding: 0 1rem;
+  cursor: pointer;
 }
