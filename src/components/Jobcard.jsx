@@ -6,7 +6,7 @@ export default function Jobcard({ data, addFilter }) {
       className={"jobcard" + (data.featured ? " jobcard--featured" : "")}
       key={data.id}
     >
-      <img src={"./public" + data.logo.slice(1)} alt="" />
+      <img src={data.logo.slice(1)} alt="" />
       <div className="jobcard__title">
         <h2 className="jobcard__company">{data.company}</h2>
         {data.new && <p className="jobcard__new">NEW!</p>}

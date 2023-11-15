@@ -1,6 +1,6 @@
 import Jobcard from "./components/Jobcard.jsx";
 import Filterbar from "./components/Filterbar.jsx";
-import data from "../public/data.json";
+import data from "./assets/data/data.json";
 import "./App.css";
 import { useEffect, useState } from "react";
 
