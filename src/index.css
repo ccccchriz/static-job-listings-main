@@ -78,13 +78,15 @@ h6 {
 
 body {
   background-color: hsl(var(--clr-neutral-200));
+  font-family: var(--ff-base);
+  font-weight: var(--fw-medium);
 }
 
 #root {
   display: grid;
 
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 #header {
@@ -98,4 +100,11 @@ body {
   #header {
     background-image: url("./assets/images/bg-header-desktop.svg");
   }
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("./assets/fonts/LeagueSpartan-Bold.woff2")
+    url("./assets/fonts/LeagueSpartan-Medium.woff2");
+  font-weight: 500, 700;
 }
