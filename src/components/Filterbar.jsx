@@ -1,5 +1,5 @@
 import "./Filterbar.css";
 
-export const Filterbar = () => {
+export default function Filterbar() {
   return <div>Filterbar</div>;
-};
+}
