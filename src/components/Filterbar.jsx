@@ -8,10 +8,7 @@ export default function Filterbar({ filters, removeFilter }) {
           <li key={filter}>
             <span>{filter}</span>
             <button onClick={() => removeFilter(filter)}>
-              <img
-                src="./src/assets/images/icon-remove.svg"
-                alt="remove filter"
-              />
+              <img src="./public/images/icon-remove.svg" alt="remove filter" />
             </button>
           </li>
         ))}
