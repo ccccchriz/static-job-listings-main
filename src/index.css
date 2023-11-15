@@ -75,3 +75,27 @@ h6 {
   --fw-bold: 700;
   --fs-base: 0.9375rem;
 }
+
+body {
+  background-color: hsl(var(--clr-neutral-200));
+}
+
+#root {
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  background-color: hsl(var(--clr-primary-cyan));
+  background-image: url("./assets/images/bg-header-mobile.svg");
+  background-size: contain;
+  min-height: 12vh;
+}
+
+@media (min-width: 40rem) {
+  #header {
+    background-image: url("./assets/images/bg-header-desktop.svg");
+  }
+}
