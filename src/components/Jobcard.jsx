@@ -12,18 +12,24 @@ export default function Jobcard({ data, addFilter }) {
         {data.new && <p className="jobcard__new">NEW!</p>}
         {data.featured && <p className="jobcard__featured">FEATURED</p>}
       </div>
-      <p className="jobcard__position">{data.position}</p>
+      <a className="jobcard__position" href="">
+        {data.position}
+      </a>
       <ul className="jobcard__infos">
         <li>{data.postedAt}</li>
         <li>{data.contract}</li>
         <li>{data.location}</li>
       </ul>
       <ul className="jobcard__tags">
-        <li onClick={() => addFilter(data.role)}>{data.role}</li>
-        <li onClick={() => addFilter(data.level)}>{data.level}</li>
+        <li>
+          <button onClick={() => addFilter(data.role)}>{data.role}</button>
+        </li>
+        <li>
+          <button onClick={() => addFilter(data.level)}>{data.level}</button>
+        </li>
         {data.languages.concat(data.tools).map((el, index) => (
-          <li key={index} onClick={() => addFilter(el)}>
-            {el}
+          <li key={index}>
+            <button onClick={() => addFilter(el)}>{el}</button>
           </li>
         ))}
       </ul>

@@ -34,6 +34,11 @@
   border: none;
   background-color: hsl(var(--clr-primary-cyan));
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.filterbar__list > li > button:hover {
+  background-color: hsl(var(--clr-neutral-500));
 }
 
 .filterbar__clear {
@@ -43,4 +48,10 @@
   color: hsl(var(--clr-neutral-400));
   padding: 0 1rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.filterbar__clear:hover {
+  text-decoration: underline;
+  color: hsl(var(--clr-primary-cyan));
 }

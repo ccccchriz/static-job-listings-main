@@ -50,6 +50,13 @@
   margin-left: 1rem;
   color: hsl(var(--clr-neutral-500));
   font-weight: var(--fw-bold);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.jobcard__position:hover {
+  cursor: pointer;
+  color: hsl(var(--clr-primary-cyan));
 }
 
 .jobcard__infos {
@@ -76,10 +83,18 @@
   font-size: 0.9375rem;
 }
 
-.jobcard__tags > li {
+.jobcard__tags > li > button {
+  border: none;
   color: hsl(var(--clr-primary-cyan));
   background-color: hsla(var(--clr-primary-cyan), 0.15);
   padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.jobcard__tags > li > button:hover {
+  color: hsl(var(--clr-neutral-200));
+  background-color: hsl(var(--clr-primary-cyan));
 }
 
 @media (min-width: 52rem) {
