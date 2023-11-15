@@ -1,5 +1,6 @@
 import Jobcard from "./components/Jobcard.jsx";
 import Filterbar from "./components/Filterbar.jsx";
+// import data from "../public/data.json";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -8,7 +9,7 @@ function App() {
   const [filters, setFilters] = useState([]);
 
   useEffect(() => {
-    fetch("./src/assets/data/data.json")
+    fetch("./data.json")
       .then((data) => data.json())
       .then((json) => setData(json))
       .catch((error) => console.log(error));
