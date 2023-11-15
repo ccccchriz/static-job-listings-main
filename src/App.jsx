@@ -14,17 +14,21 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
-  const addFilter = (filters) => {
-    setFilters((list) => [filters, ...list]);
+  const addFilter = (newFilter) => {
+    if (filters.includes(newFilter)) return;
+    setFilters((list) => [newFilter, ...list]);
   };
 
-  const removeFilter = (filters) => {
-    setFilters((list) => list.filter((item) => item != filters));
+  const removeFilter = (newFilter = "clear") => {
+    if (newFilter == "clear") setFilters([]);
+    else setFilters((list) => list.filter((item) => item != newFilter));
   };
 
   return (
     <>
-      {filters.length != 0 && <Filterbar />}
+      {filters.length != 0 && (
+        <Filterbar filters={filters} removeFilter={removeFilter} />
+      )}
       {data == undefined ? (
         <h2>Loading jobs</h2>
       ) : (
