@@ -7,9 +7,8 @@ export default function Filterbar({ filters, removeFilter }) {
         {filters.map((filter) => (
           <li key={filter}>
             <span>{filter}</span>
-            <button>
+            <button onClick={() => removeFilter(filter)}>
               <img
-                onClick={() => removeFilter(filter)}
                 src="./src/assets/images/icon-remove.svg"
                 alt="remove filter"
               />
