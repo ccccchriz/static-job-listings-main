@@ -102,6 +102,10 @@ body {
   #header {
     background-image: url("./assets/images/bg-header-desktop.svg");
   }
+
+  #root {
+    margin-bottom: 3rem;
+  }
 }
 
 @font-face {
