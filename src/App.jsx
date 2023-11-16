@@ -27,9 +27,8 @@ function App() {
 
   return (
     <>
-      {filters.length != 0 && (
-        <Filterbar filters={filters} removeFilter={removeFilter} />
-      )}
+      <Filterbar filters={filters} removeFilter={removeFilter} />
+
       {data == undefined ? (
         <h2>Loading jobs</h2>
       ) : (
